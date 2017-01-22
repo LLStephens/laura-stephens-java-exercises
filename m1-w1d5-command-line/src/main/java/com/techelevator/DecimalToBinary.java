@@ -25,8 +25,17 @@ public class DecimalToBinary {
 		String[] valueStrings = value.split(" "); // takes String value and splits into multiple strings stored as String array named valueStrings
 
 		for (int i = 0; i < valueStrings.length; i++) {
-			int intValue = Integer.parseInt(valueStrings[i]); // parses each  sstring in valueStrings array into integers called intValue
-			System.out.print(intValue + " in binary is " + Integer.toBinaryString(intValue) + ".\n");
+			int intValue = Integer.parseInt(valueStrings[i]); // parses each  string in valueStrings array into integers called intValue
+		    String binary = "";
+			while (intValue > 0) {
+				if (intValue % 2 == 0) {
+					binary = "0" + binary;
+				} else {
+					binary = "1" + binary;
+				}
+				intValue = intValue / 2;
+			}
+		    System.out.println(valueStrings[i] + " in binary is " + binary);
 		}
 	}
 }
