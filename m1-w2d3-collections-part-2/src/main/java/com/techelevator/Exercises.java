@@ -190,19 +190,30 @@ public class Exercises {
 	public Map<String, Integer> wordCount(String[] words) {
 		Map<String, Integer> myMap = new HashMap<String, Integer>();
 
-		for (int i = 0; i < words.length; i++) {
-			int count = 0;
-			for (int j = 0; j < words.length; j++) {
-				if (words[j].equals(words[i])) {
-					count++;
-					myMap.put(words[j], count);
-				}
+		for(String word : words){
+			if(!myMap.containsKey(word)){
+				myMap.put(word, 1);
+			} else {
+				int num = myMap.get(word);
+				myMap.put(word,++num);
 			}
 		}
-
-		return myMap;
-
+			return myMap;
 	}
+		
+//		for (int i = 0; i < words.length; i++) {
+//			int count = 0;
+//			for (int j = 0; j < words.length; j++) {
+//				if (words[j].equals(words[i])) {
+//					count++;
+//					myMap.put(words[j], count);
+//				}
+//			}
+//		}
+//
+//		return myMap;
+
+	
 
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key
@@ -219,18 +230,28 @@ public class Exercises {
 	public Map<Integer, Integer> integerCount(int[] ints) {
 		Map<Integer, Integer> myMap = new HashMap<Integer, Integer>();
 
-		for (int i = 0; i < ints.length; i++) {
-			int count = 0;
-			for (int j = 0; j < ints.length; j++) {
-				if (ints[j] == (ints[i])) {
-					count++;
-					myMap.put(ints[j], count);
-				}
+		for(Integer myInt : ints){
+			if(!myMap.containsKey(myInt)){
+				myMap.put(myInt, 1);
+			} else {
+				int num = myMap.get(myInt);
+				myMap.put(myInt,++num);
 			}
 		}
-
 		return myMap;
 	}
+		
+//		for (int i = 0; i < ints.length; i++) {
+//			int count = 0;
+//			for (int j = 0; j < ints.length; j++) {
+//				if (ints[j] == (ints[i])) {
+//					count++;
+//					myMap.put(ints[j], count);
+//				}
+//			}
+//		}
+
+
 
 	/*
 	 * Given an array of strings, return a Map<String, Boolean> where each
@@ -245,22 +266,32 @@ public class Exercises {
 	public Map<String, Boolean> wordMultiple(String[] words) {
 		Map<String, Boolean> myMap = new HashMap<String, Boolean>();
 
-		for (int i = 0; i < words.length; i++) {
-			int count = 0;
-			for (int j = 0; j < words.length; j++) {
-				if (words[j].equals(words[i])) {
-					count++;
-					boolean isTwice = false;
-					if (count >= 2) {
-						isTwice = true;
-					}
-					myMap.put(words[j], isTwice);
-				}
+		
+		for(String word: words) {
+			if(!myMap.containsKey(word)) {
+				myMap.put(word, false);
+			} else {
+				myMap.put(word, true);
 			}
+			
 		}
-
 		return myMap;
 	}
+		
+//		for (int i = 0; i < words.length; i++) {
+//			int count = 0;
+//			for (int j = 0; j < words.length; j++) {
+//				if (words[j].equals(words[i])) {
+//					count++;
+//					boolean isTwice = false;
+//					if (count >= 2) {
+//						isTwice = true;
+//					}
+//					myMap.put(words[j], isTwice);
+//				}
+//			}
+//		}
+
 
 	/*
 	 * Given two maps, Map<String, Integer>, merge the two into a new map,
