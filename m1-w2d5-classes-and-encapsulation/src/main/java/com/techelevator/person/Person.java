@@ -2,6 +2,58 @@ package com.techelevator.person;
 
 public class Person {
 
+	private String firstName;
+	private String lastName;
+	private int age;
+	
+	public Person(){
+		firstName = new String();
+		lastName= new String();
+		age = 0;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		if(firstName != null && !firstName.isEmpty()){
+			this.firstName = firstName;
+		}
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		if(lastName != null && !lastName.isEmpty()){
+			this.lastName = lastName;
+		}
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		if(age>0){
+			this.age = age;
+		}
+	}
+	
+	public String fullName(){
+		return firstName + " " +lastName;
+	}
+	
+	public boolean adult(){
+		if(age>=18){
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	/*
 	 
 	 The Person class has the following properties

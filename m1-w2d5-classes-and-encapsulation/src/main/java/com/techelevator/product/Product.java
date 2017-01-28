@@ -1,7 +1,47 @@
 package com.techelevator.product;
 
 public class Product {
-
+	private String name;
+	private double price;
+	private int weightInOunces;
+	
+	public Product(){
+		name = new String();
+		price = 0.00;
+		weightInOunces = 0;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public double getPrice(){
+		return price;
+	}
+	
+	public int getWeightInOunces(){
+		return weightInOunces;
+	}
+	
+	public void setName(String name){
+		if(name != null && !name.isEmpty()){
+			this.name=name;
+		}
+	}
+	
+	public void setPrice(double price){
+		if(price > 0){
+			this.price=price;
+		}
+	}
+	
+	public void setWeightInOunces(int weightInOunces){
+		if(weightInOunces > 0){
+			this.weightInOunces=weightInOunces;
+		}
+	}
+	
+	
 	/*
 	 
 	 The Product class has the following properties

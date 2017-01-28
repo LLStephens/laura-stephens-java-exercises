@@ -44,6 +44,66 @@ public class CalculatorTest {
 			System.out.println("Test FAILED: The running result should be 4 after adding 1 and 3 but it is "+result);
 		}
 		
+		result = calculator.subtract(2);
+		if(result != 2) {
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be 2 after subtracting 2, but it is " + result);
+		}
+		
+		result = calculator.subtract(3);
+		if(result != -1){
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be -1 after subtracting 3, but it is " + result);
+		}
+		
+		if (calculator.getResult() != -1) {
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The running result should be -1 after subtracting 3, but it is " + result);
+		}
+		
+		calculator.reset();
+		result = calculator.multiply(5);
+		if(result != 0){
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be 0 after multiplying by 5, but it is " + result);
+		}
+		
+		calculator.add(1);
+		result = calculator.multiply(5);
+		if(result != 5){
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be 5 after multiplying by 5, but it is " + result);
+		}
+		
+		result = calculator.multiply(4);
+		if(result != 20){
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be 20 after multiplying by 5, but it is " + result);
+		}
+		
+		if (calculator.getResult() != 20) {
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The running result should be 20 after multiplying by 4, but it is " + result);
+		}
+		
+		calculator = new Calculator(2);
+		result = calculator.power(2);
+		if(result != 4){
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be 4 after raising by 2, but it is " + result);
+		}
+		
+		result = calculator.power(-2);
+		if(result != 16){
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The returned result should be 16 after raising by -2, but it is " + result);
+		}
+		
+		if (calculator.getResult() != 16) {
+			allTestsPassed = false;
+			System.out.println("Test FAILED: The running result should be 16 after raising by -2, but it is " + result);
+		}
+		
 		/******************************************************************
 		 * ADD MORE TESTS FOR THE REST OF THE FUNCTIONALITY OF Calculator *
 		 ******************************************************************/

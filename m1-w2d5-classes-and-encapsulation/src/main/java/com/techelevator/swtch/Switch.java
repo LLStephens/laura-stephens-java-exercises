@@ -4,41 +4,49 @@ package com.techelevator.swtch; // "swtch" misspelling intentional, "switch" is 
  * This class represents an on-off switch. It turns on. It turns off. And, you can even ask if it's on, or off.
  */
 public class Switch {
-
+	private boolean isOn;
 	//
 	// Add any properties, along with getters and/or setters, that may be needed to implements the class methods.
 	//
 
 	public Switch() {
-
+		isOn = false;
 	}
 	
 	/**
 	 * Turns the switch on.
 	 */
 	public void turnOn() {
-
+		isOn = true;
 	}
 	
 	/**
 	 * Turns the switch off.
 	 */
 	public void turnOff() {
-
+		isOn=false;
 	}
 	
 	/**
 	 * @return true if the switch is currently on, otherwise false
 	 */
 	public boolean isOn() {
-		return false;
+		if(isOn){
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 	/**
 	 * @return true if the switch is currently off, otherwise false
 	 */
 	public boolean isOff() {
-		return false;
+		if(isOn){
+			return false;
+		}else{
+			return true;
+		}
 	}
 	
 }

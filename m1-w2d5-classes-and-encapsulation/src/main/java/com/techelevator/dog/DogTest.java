@@ -8,7 +8,7 @@ public class DogTest {
 				
 		/*** New dogs are awake ***/
 		Dog spot = new Dog();
-		if(spot.isSleeping()) {
+		if(spot.isSleeping()==false) {
 			allTestsPassed = false;
 			System.out.println("Test FAILED: New dogs should be awake, but this one is sleeping.");
 		}
@@ -22,12 +22,13 @@ public class DogTest {
 		
 		/*** Dog should be awake after being told to wake up ***/
 		spot.wakeUp();
-		if(spot.isSleeping()) {
+		if(spot.isSleeping()==false) {
 			allTestsPassed = false;
 			System.out.println("Test FAILED: The dog should be awake after being told to wake up, but he is sleeping.");
 		}
 		
 		/*** Dog should say "woof!" when awake ***/
+		spot.wakeUp();
 		String sound = spot.makeSound();
 		if("woof!".equals(sound) == false) {
 			allTestsPassed = false;
