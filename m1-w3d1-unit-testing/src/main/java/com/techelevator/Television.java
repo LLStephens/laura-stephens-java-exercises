@@ -9,7 +9,7 @@ public class Television {
     /**
      * Current on/off status of the tv
      */
-    public boolean IsOn() {
+    public boolean isOn() {
         return isOn;        
     }
 
@@ -31,7 +31,7 @@ public class Television {
     /**
      * Turns the tv on. Also resets the volume level to 2 
      */
-    public void TurnOn()
+    public void turnOn()
     {
         isOn = true;                        
     }
@@ -39,7 +39,7 @@ public class Television {
     /**
      * Tuns the tv off. 
      */
-    public void TurnOff()
+    public void turnOff()
     {
         isOn = false;
     }
@@ -48,7 +48,7 @@ public class Television {
      * Changes the tv channel, but only if it is on. 
      * @param newChannel new channel to turn to
      */
-    public void ChangeChannel(int newChannel)
+    public void changeChannel(int newChannel)
     {
         if (isOn && newChannel > 3 && newChannel < 18)
         {
@@ -59,17 +59,21 @@ public class Television {
     /**
      * Raises the volume. It won't raise it past 10 and the tv has to be on 
      */
-    public void RaiseVolume()
+    public void raiseVolume()
     {
-        currentVolume++;
+        if(isOn() && currentVolume <10){
+        	currentVolume++;
+        }
     }
 
     /**
      * Lowers the volume. It won't lower it below 0 and the tv has to be on 
      */
-    public void LowerVolume()
+    public void lowerVolume()
     {
-        currentVolume--;
+        if(isOn() && currentVolume >0){
+        	currentVolume--;
+        }
     }
 
 }

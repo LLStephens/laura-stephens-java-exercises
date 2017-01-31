@@ -28,28 +28,40 @@ public class Employee {
     public int getEmployeeId() {
         return employeeId;
     }
+    
+    public void setEmployeeId(int employeeId){
+    	this.employeeId=employeeId;
+    }
 
     /**
      * Employee first name
      * @return firstname
      */
-    public String FirstName() {
+    public String firstName() {
         return firstName;
+    }
+    
+    public void setFirstName(String firstName){
+    	this.firstName = firstName;
     }
 
     /**
      * Employee last name
      * @return lastName
      */
-    public String LastName() {
+    public String lastName() {
         return lastName;        
+    }
+    
+    public void setLastName(String lastName){
+    	this.lastName = lastName;
     }
 
     /**
      * LastName, FirstName 
      * @return lastName, firstName
      */
-    public String FullName() {
+    public String fullName() {
         return lastName + ", " + firstName;
     }
 
@@ -75,6 +87,10 @@ public class Employee {
      */
     public double getAnnualSalary() {
         return annualSalary;        
+    }
+    
+    public void setAnnualSalary(double annualSalary) {
+    	this.annualSalary = annualSalary;
     }
 
     /**

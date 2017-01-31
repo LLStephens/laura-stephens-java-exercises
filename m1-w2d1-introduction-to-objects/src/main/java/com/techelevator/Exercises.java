@@ -3,6 +3,122 @@ package com.techelevator;
 public class Exercises {
 
 	/*
+	 Given a string and an index, return a string length 2 starting at the given index. If the index is 
+	 too big or too small to define a string length 2, use the first 2 chars. The string length will be 
+	 at least 2.
+	 twoChar("java", 0) → "ja"
+	 twoChar("java", 2) → "va"
+	 twoChar("java", 3) → "ja"
+	 */
+	public String twoChar(String str, int index) {	
+		return null;
+	}
+	
+	/*
+	 Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with 
+	 "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals()
+	 to compare 2 strings.
+	 hasBad("badxx") → true
+	 hasBad("xbadxx") → true
+	 hasBad("xxbadxx") → false
+	 */
+	public boolean hasBad(String str) {
+		 return false;
+	} 
+
+	/*
+	 Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+	 stringTimes("Hi", 2) → "HiHi"
+	 stringTimes("Hi", 3) → "HiHiHi"
+	 stringTimes("Hi", 1) → "Hi"
+	 */
+	public String stringTimes(String str, int n) {
+		return null;
+	}
+	
+	/*
+	 Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or 
+	 whatever is there if the string is less than length 3. Return n copies of the front;
+	 frontTimes("Chocolate", 2) → "ChoCho"
+	 frontTimes("Chocolate", 3) → "ChoChoCho"
+	 frontTimes("Abc", 3) → "AbcAbcAbc"
+	 */
+	public String frontTimes(String str, int n) {
+		return null;
+	}
+	
+
+	/*
+	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
+	 doubleX("axxbb") → true
+	 doubleX("axaxax") → false
+	 doubleX("xxxxx") → true
+	 */
+	public boolean doubleX(String str) {
+		return true;
+	}
+	
+	/*
+	 Given a non-empty string like "Code" return a string like "CCoCodCode".
+	 stringSplosion("Code") → "CCoCodCode"
+	 stringSplosion("abc") → "aababc"
+	 stringSplosion("ab") → "aab"
+	 */
+	public String stringSplosion(String str) {
+		return null;
+	}
+	
+	/* left off here
+	 Given a string, return the count of the number of times that a substring length 2 appears in the string and 
+	 also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+	 last2("hixxhi") → 1
+	 last2("xaxxaxaxx") → 1
+	 last2("axxxaaxx") → 2
+	 */
+	
+	
+	public int last2(String str) {
+		return 0;
+	}
+	
+	/*
+	 Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end 
+	 should not be removed.
+	 stringX("xxHxix") → "xHix"
+	 stringX("abxxxcd") → "abcd"
+	 stringX("xabxxxcdx") → "xabcdx"
+	 */
+	public String stringX(String str) {
+		return null;
+	}
+	
+	/*
+	 Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
+	 altPairs("kitten") → "kien"
+	 altPairs("Chocolate") → "Chole"
+	 altPairs("CodingHorror") → "Congrr"
+	 */
+	public String altPairs(String str) {
+		return null;
+	}
+
+	/*
+	 Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but 
+	 the "a" can be any char. The "yak" strings will not overlap.
+	 stringYak("yakpak") → "pak"
+	 stringYak("pakyak") → "pak"
+	 stringYak("yak123ya") → "123ya"
+	 */
+	public String stringYak(String str) {
+		return null;
+	} 
+
+	
+	
+	
+	//Easier
+	
+	/*
 	 Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
 	 helloName("Bob") → "Hello Bob!"
 	 helloName("Alice") → "Hello Alice!"
@@ -231,22 +347,6 @@ public class Exercises {
 	}
 
 	/*
-	 Given a string and an index, return a string length 2 starting at the given index. If the index is 
-	 too big or too small to define a string length 2, use the first 2 chars. The string length will be 
-	 at least 2.
-	 twoChar("java", 0) → "ja"
-	 twoChar("java", 2) → "va"
-	 twoChar("java", 3) → "ja"
-	 */
-	public String twoChar(String str, int index) {
-
-		if(index <= str.length()-2 && index >= 0)
-			return str.substring(index, index+2);
-		return str.substring(0, 2);
-	}
-	
-
-	/*
 	 Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". 
 	 The string length will be at least 3.
 	 middleThree("Candy") → "and"
@@ -256,61 +356,6 @@ public class Exercises {
 	public String middleThree(String str) {
 		int index = str.length()/2;
 		return str.substring(index -1, index+2);
-	}
-
-	/*
-	 Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with 
-	 "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals()
-	 to compare 2 strings.
-	 hasBad("badxx") → true
-	 hasBad("xbadxx") → true
-	 hasBad("xxbadxx") → false
-	 */
-	public boolean hasBad(String str) {
-		if(str.contains("bad")){
-			int matchIndex = str.indexOf("bad");
-			if (matchIndex==0 || matchIndex==1) {
-				return true;
-			}
-		} 
-		return false;
-	}
-
-	/*
-	 Given a string and a non-negative int n, return a larger string that is n copies of the original string.
-	 stringTimes("Hi", 2) → "HiHi"
-	 stringTimes("Hi", 3) → "HiHiHi"
-	 stringTimes("Hi", 1) → "Hi"
-	 */
-	public String stringTimes(String str, int n) {
-		String oneString = new String();
-		for (int i = 0; i < n; i++) {
-			oneString += str;
-		}
-		return oneString;
-	}
-
-	/*
-	 Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or 
-	 whatever is there if the string is less than length 3. Return n copies of the front;
-	 frontTimes("Chocolate", 2) → "ChoCho"
-	 frontTimes("Chocolate", 3) → "ChoChoCho"
-	 frontTimes("Abc", 3) → "AbcAbcAbc"
-	 */
-	public String frontTimes(String str, int n) {
-		String frontString = new String();
-		String oneString = new String();
-		
-		if(str.length() <=3){
-		    frontString = str.substring(0);
-		} else {
-			frontString = str.substring(0,3);
-		}
-	
-		for(int i = 0; i < n; i++) {
-			oneString += frontString;
-			}
-		return oneString;
 	}
 
 	/*
@@ -330,24 +375,6 @@ public class Exercises {
 		return count;
 
 	}
-	
-
-	/*
-	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
-	 doubleX("axxbb") → true
-	 doubleX("axaxax") → false
-	 doubleX("xxxxx") → true
-	 */
-	public boolean doubleX(String str) {
-		boolean doubleX = false;
-		int index = str.indexOf('x');
-		if(index<=str.length()-2) {
-			if(str.charAt(index+1)=='x') {
-				doubleX = true;
-			}
-		}
-		return doubleX;
-	}
 
 	/*
 	 Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
@@ -364,100 +391,194 @@ public class Exercises {
 		}
 		return addString;
 	}
-
-	/*
-	 Given a non-empty string like "Code" return a string like "CCoCodCode".
-	 stringSplosion("Code") → "CCoCodCode"
-	 stringSplosion("abc") → "aababc"
-	 stringSplosion("ab") → "aab"
-	 */
-	public String stringSplosion(String str) {
-		String addString = "";
-		for(int i = 0; i<str.length()+1; i++){
-			for(int j = 0; j<i; j++){
-				addString=addString + str.charAt(j);
-			}
-		}
-		return addString;
-	}
-
-	/*
-	 Given a string, return the count of the number of times that a substring length 2 appears in the string and 
-	 also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
-	 last2("hixxhi") → 1
-	 last2("xaxxaxaxx") → 1
-	 last2("axxxaaxx") → 2
-	 */
-	public int last2(String str) {
-
-		if (str.length() < 2) {
-			return 0;
-		}
-		
-		int count = 0;
-		String lastTwo = str.substring(str.length()-2);
-		for (int i = 0; i < str.length()-2; i++) {
-			String matchTwo = str.substring(i,i+2);
-			if (matchTwo.equals(lastTwo)) {
-				count++;
-			}
-		}
-		return count;
-	}
 	
-	/*
-	 Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end 
-	 should not be removed.
-	 stringX("xxHxix") → "xHix"
-	 stringX("abxxxcd") → "abcd"
-	 stringX("xabxxxcdx") → "xabcdx"
-	 */
-	public String stringX(String str) {
 	
-		String addString = new String();
-		for (int i = 0; i < str.length(); i++) {
-			if (i == 0 || i == str.length()-1) {
-				addString += str.charAt(i);
-			} else if (str.charAt(i) != 'x') {
-				addString += str.charAt(i);
-			}
-		}
-		return addString;
-	}
+	
+//answers	
+	
+//	/* TWO CHAR
+//	 Given a string and an index, return a string length 2 starting at the given index. If the index is 
+//	 too big or too small to define a string length 2, use the first 2 chars. The string length will be 
+//	 at least 2.
+//	 twoChar("java", 0) → "ja"
+//	 twoChar("java", 2) → "va"
+//	 twoChar("java", 3) → "ja"
+//	 */
+//	public String twoChar(String str, int index) {
+//
+//		if(index <= str.length()-2 && index >= 0){
+//			return str.substring(index,index+2);
+//		} else {
+//			return str.substring(0,2);
+//		}
+//	}
+	
+//	/* HAS BAD
+//	 Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with 
+//	 "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals()
+//	 to compare 2 strings.
+//	 hasBad("badxx") → true
+//	 hasBad("xbadxx") → true
+//	 hasBad("xxbadxx") → false
+//	 */
+//	public boolean hasBad(String str) {
+//		if(str.contains("bad")){
+//			int matchIndex = str.indexOf("bad");
+//			if (matchIndex==0 || matchIndex==1) {
+//				return true;
+//			}
+//		} 
+//		return false;
+//	}
 
-	/*
-	 Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
-	 altPairs("kitten") → "kien"
-	 altPairs("Chocolate") → "Chole"
-	 altPairs("CodingHorror") → "Congrr"
-	 */
-	public String altPairs(String str) {
-		String pairs = "";
-		for(int i = 0; i<str.length(); i++){
-			if(i%4==0 || i%4==1) {
-				pairs+=str.charAt(i);
-			}
-		}
-		return pairs;
-	}
+//	/*
+//	 Given a string and a non-negative int n, return a larger string that is n copies of the original string.
+//	 stringTimes("Hi", 2) → "HiHi"
+//	 stringTimes("Hi", 3) → "HiHiHi"
+//	 stringTimes("Hi", 1) → "Hi"
+//	 */
+//	public String stringTimes(String str, int n) {
+//		String oneString = new String();
+//		for (int i = 0; i < n; i++) {
+//			oneString += str;
+//		}
+//		return oneString;
+//	}
+	
+//	/*
+//	 Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or 
+//	 whatever is there if the string is less than length 3. Return n copies of the front;
+//	 frontTimes("Chocolate", 2) → "ChoCho"
+//	 frontTimes("Chocolate", 3) → "ChoChoCho"
+//	 frontTimes("Abc", 3) → "AbcAbcAbc"
+//	 */
+//	public String frontTimes(String str, int n) {
+//	String word = new String();
+//	
+//	for(int i = 0; i<n; i++){
+//		if(str.length() >=3){
+//			word+= str.substring(0, 3);
+//		}else {
+//			word+= str.substring(0);
+//		}
+//	}
+//	return word;
 
-	/*
-	 Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but 
-	 the "a" can be any char. The "yak" strings will not overlap.
-	 stringYak("yakpak") → "pak"
-	 stringYak("pakyak") → "pak"
-	 stringYak("yak123ya") → "123ya"
-	 */
-	public String stringYak(String str) {
-		String[] parts = str.split("yak");
-		String results = new String();
-		
-		for(int i = 0; i<parts.length; i++) {
-			results+=parts[i];
-		}
-		return results;
-		//return str.replaceAll("yak", "");
+//	}
+	
+//	/*
+//	 Given a string, return true if the first instance of "x" in the string is immediately followed by another "x".
+//	 doubleX("axxbb") → true
+//	 doubleX("axaxax") → false
+//	 doubleX("xxxxx") → true
+//	 */
+//	public boolean doubleX(String str) {
+//		boolean doubleX = false;
+//		int index = str.indexOf('x');
+//		if(index<=str.length()-2) {
+//			if(str.charAt(index+1)=='x') {
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
+	
+//	/*
+//	 Given a non-empty string like "Code" return a string like "CCoCodCode".
+//	 stringSplosion("Code") → "CCoCodCode"
+//	 stringSplosion("abc") → "aababc"
+//	 stringSplosion("ab") → "aab"
+//	 */
+//	public String stringSplosion(String str) {
+//		String addString = "";
+//		for(int i = 0; i<str.length()+1; i++){
+//			for(int j = 0; j<i; j++){
+//				addString=addString + str.charAt(j);
+//			}
+//		}
+//		return addString;
+//	}
+	
+//	/*
+//	 Given a string, return the count of the number of times that a substring length 2 appears in the string and 
+//	 also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+//	 last2("hixxhi") → 1
+//	 last2("xaxxaxaxx") → 1
+//	 last2("axxxaaxx") → 2
+//	 */
+//	public int last2(String str) {
+//
+//		if (str.length() < 2) {
+//			return 0;
+//		}
+//		
+//		int count = 0;
+//		String lastTwo = str.substring(str.length()-2);
+//		for (int i = 0; i < str.length()-2; i++) {
+//			String matchTwo = str.substring(i,i+2);
+//			if (matchTwo.equals(lastTwo)) {
+//				count++;
+//			}
+//		}
+//		return count;
+//	}
+//	
+//	/*
+//	 Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end 
+//	 should not be removed.
+//	 stringX("xxHxix") → "xHix"
+//	 stringX("abxxxcd") → "abcd"
+//	 stringX("xabxxxcdx") → "xabcdx"
+//	 */
+//	public String stringX(String str) {
+//	
+//		String addString = new String();
+//		for (int i = 0; i < str.length(); i++) {
+//			if (i == 0 || i == str.length()-1) {
+//				addString += str.charAt(i);
+//			} else if (str.charAt(i) != 'x') {
+//				addString += str.charAt(i);
+//			}
+//		}
+//		return addString;
+//	}
+//
+//	/*
+//	 Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
+//	 altPairs("kitten") → "kien"
+//	 altPairs("Chocolate") → "Chole"
+//	 altPairs("CodingHorror") → "Congrr"
+//	 */
+//	public String altPairs(String str) {
+//		String pairs = "";
+//		for(int i = 0; i<str.length(); i++){
+//			if(i%4==0 || i%4==1) {
+//				pairs+=str.charAt(i);
+//			}
+//		}
+//		return pairs;
+//	}
+//
+//	/*
+//	 Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but 
+//	 the "a" can be any char. The "yak" strings will not overlap.
+//	 stringYak("yakpak") → "pak"
+//	 stringYak("pakyak") → "pak"
+//	 stringYak("yak123ya") → "123ya"
+//	 */
+//	public String stringYak(String str) {
+//		String[] parts = str.split("yak");
+//		String results = new String();
+//		
+//		for(int i = 0; i<parts.length; i++) {
+//			results+=parts[i];
+//		}
+//		return results;
+//		//return str.replaceAll("yak", "");
+//
+//	}
 
-	}
+	
+	
 	
 }

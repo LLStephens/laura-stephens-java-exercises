@@ -25,6 +25,12 @@ public class Airplane {
     public String getPlaneNumber() {
         return planeNumber;            
     }
+    
+    public void setPlaneNumer(String planeNumber){
+    	if(planeNumber.length() == 6){
+    		this.planeNumber = planeNumber;
+    	}
+    }
 
     /**
      * Number of already booked first class seats 
@@ -39,7 +45,7 @@ public class Airplane {
      * @return availableFirstClassSeats
      */
     public int getAvailableFirstClassSeats() {
-        return bookedFirstClassSeats;
+        return totalFirstClassSeats - bookedFirstClassSeats;
     }
 
     /**
@@ -63,7 +69,7 @@ public class Airplane {
      * @return availableCoachSeats
      */
     public int getAvailableCoachSeats() {
-        return totalCoachSeats;
+        return totalCoachSeats - bookedCoachSeats;
     }
 
     /**
@@ -80,18 +86,16 @@ public class Airplane {
      * @param totalNumberOfSeats Total number of seats to reserve
      * @return True if reservation was successful, false otherwise
      */
-    public boolean Reserve(boolean firstClass, int totalNumberOfSeats) {       
+    public boolean reserve(boolean firstClass, int totalNumberOfSeats) {       
         if (firstClass) {
-            bookedFirstClassSeats += totalNumberOfSeats;
             if (totalNumberOfSeats > getAvailableFirstClassSeats()) {
                 return false;
-            }
+            } bookedFirstClassSeats += totalNumberOfSeats;
         }
         else {
-            bookedCoachSeats += totalNumberOfSeats;
             if (totalNumberOfSeats > getAvailableCoachSeats()) {
                 return false;
-            }
+            } bookedCoachSeats += totalNumberOfSeats;
         }
         return true;
     }

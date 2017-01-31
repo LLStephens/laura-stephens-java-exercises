@@ -59,6 +59,12 @@ public class SmartPhone {
         return batteryCharge;            
     }
 
+    public void setBatteryCharge(int batteryCharge){
+    	if(batteryCharge >=0 && batteryCharge <=100){
+    		this.batteryCharge=batteryCharge;
+    	}
+    }
+    
     /**
      * On Call status
      * @return onCall
@@ -73,18 +79,21 @@ public class SmartPhone {
      * @param numberOfMinutesToTalk 1 minute drains 1% of battery
      * @return True if the call could be placed, false otherwise
      */
-    public boolean Call(String phoneNumberToCall, int numberOfMinutesToTalk)
+    public boolean call(String phoneNumberToCall, int numberOfMinutesToTalk)
     {                        
+        if(batteryCharge > numberOfMinutesToTalk){
         onCall = true;
         batteryCharge -= numberOfMinutesToTalk;
-
         return true;
+        } else {
+        	return false;
+        }
     }
 
     /**
      * Answer the phone. OnCall will be set to true. Battery juice is free when you answer the phone 
      */
-    public void AnswerPhone()
+    public void answerPhone()
     {
         onCall = true;
     }
@@ -92,17 +101,17 @@ public class SmartPhone {
     /**
      * Hangs up the phone. OnCall will be set to false. 
      */
-    public void HangUp()
+    public void hangUp()
     {
-        onCall = !onCall;
+        onCall = false;
     }
 
     /**
      * Recharges the battery from wherever it is at back to 100 
      */
-    public void RechargeBattery()
+    public void rechargeBattery()
     {
-        batteryCharge = 95;
+        batteryCharge = 100;
     }
 
 }
