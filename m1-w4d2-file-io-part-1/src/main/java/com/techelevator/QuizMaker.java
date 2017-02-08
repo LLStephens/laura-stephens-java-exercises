@@ -29,7 +29,6 @@ public class QuizMaker {
 						for (int i = 0; i < quiz.size(); i++) {
 							question.construct(quiz.get(i));
 
-							System.out.println(question);
 							System.out.println();
 
 							System.out.print("Your answer: ");

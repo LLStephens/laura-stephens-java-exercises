@@ -64,6 +64,6 @@ public class KataFizzBuzzTest {
 	public void given_35_return_FizzBuzz(){
 		fizzBuzz = num.convert(35);
 		
-		Assert.assertEquals("Buzz", fizzBuzz.get(0));
+		Assert.assertEquals("Fizz", fizzBuzz.get(0));
 	}
 }
