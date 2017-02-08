@@ -17,10 +17,10 @@ public class FexEdTest {
 	}
 	@Test
 	public void rate_for_far(){
-		Assert.assertEquals(25,  mail.calculateRate(50, 10), 0.001);
+		Assert.assertEquals(25,  mail.calculateRate(700, 10), 0.001);
 	}
 	@Test
 	public void rate_for_heavy_and_far(){
-		Assert.assertEquals(28,  mail.calculateRate(70, 900), 0.001);
+		Assert.assertEquals(28, mail.calculateRate(700, 90), 0.001);
 	}
 }

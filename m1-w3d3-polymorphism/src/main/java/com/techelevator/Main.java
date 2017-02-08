@@ -29,10 +29,11 @@ public class Main {
 	drivers.add(new PostalServiceThirdClass());
 	drivers.add(new FexEd());
 	drivers.add(new SpuFourDay());
+	drivers.add(new SpuSecondDay());
 	drivers.add(new SpuNextDay());
 	System.out.println("Deilvery Method \t\t " + "$ cost");
 	for(DeliveryDriver driver : drivers) {
-		System.out.println(driver.getName() + "\t" + driver.calculateRate(distance, weight));
+		System.out.println(driver.getName() + "\t" + String.format("%.2f",driver.calculateRate(distance, weight)));
 	}
 	
 	
