@@ -12,8 +12,7 @@ public class FizzWriter {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		List<String> myList = new ArrayList();
-		FileOutputStream output = new FileOutputStream("/Users/lstephens/Desktop/FizzBuzz.txt");
-		try (PrintWriter fileOutput = new PrintWriter(output)) {
+		try (PrintWriter fileOutput = new PrintWriter(new File ("/Users/lstephens/Desktop/FizzBuzz.txt"))) {
 			for (int i = 1; i <= 300; i++) {
 				if (i % 5 == 0 && i % 3 == 0) {
 					myList.add("FizzBuzz");
@@ -25,6 +24,9 @@ public class FizzWriter {
 					myList.add(Integer.toString(i));
 				}
 			}	fileOutput.println(myList);
+		}
+		catch (IOException e){
+			e.getMessage();
 		}
 	}
 }
