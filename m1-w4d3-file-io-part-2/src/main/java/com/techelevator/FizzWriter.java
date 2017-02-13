@@ -24,6 +24,7 @@ public class FizzWriter {
 					myList.add(Integer.toString(i));
 				}
 			}	fileOutput.println(myList);
+			fileOutput.flush();
 		}
 		catch (IOException e){
 			e.getMessage();
