@@ -37,6 +37,24 @@
 				
 				see exercise1-fizzbuzz.png for example output
 			 --%>
+			 
+
+		<c:forEach begin="1" end="100" var="index">
+			<c:choose>
+				<c:when test="${index % 3 == 0 && index % 5 == 0}">
+		 			<li class="fizzbuzz">FizzBuzz</li>	 			
+				</c:when> 
+		 		<c:when test="${index % 3 == 0}">
+		 			<li class="fizz">Fizz</li>
+				</c:when>
+				<c:when test="${index % 5 == 0}">
+		 			<li class ="buzz">Buzz</li>
+		 		</c:when>	
+		 		<c:otherwise>
+					<li>${index}</li>
+				</c:otherwise>
+			</c:choose>
+		 </c:forEach>
 		</ul>
 	</body>
 </html>

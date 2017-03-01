@@ -23,7 +23,26 @@
 			item should be decreased by 1.
 			 
 			See exercise3-echo.png for example output
+			param has a map of key/value pairs. get the key at count and store as "count". get the value at "word" 
+			store as word.
 		 --%>
+		 
+		 <c:set var = "count" value = "${param.count}"></c:set> 
+		 <c:set var = "word" value = "${param.word}"></c:set> 
+		 
+		 <c:if test="${empty count}">
+		 	<c:set var = "count" value = "30"></c:set>
+		 </c:if>
+
+		<c:if test="${empty word}">
+		 	<c:set var = "word" value = "Fish"></c:set>
+		 </c:if>
+
+		 <c:forEach begin="0" end="${count}" var="index">
+		 	<li style="font-size:${count-index}px">${word}</li>
+		 </c:forEach>
+		 
+		
 		</ul>
 		
 	</body>
