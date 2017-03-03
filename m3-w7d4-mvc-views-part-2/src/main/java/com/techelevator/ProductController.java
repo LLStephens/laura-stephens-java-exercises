@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ProductController {
 
-	@RequestMapping("/productList")
+	@RequestMapping("/productList") //for urls that ends in this, run this method
 	public String showProductList(HttpServletRequest request) {
 		request.setAttribute("productList", getProducts());
 		return "productList";

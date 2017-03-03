@@ -56,3 +56,91 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+#title {
+	padding: 20px; font-weight : bold;
+	font-size: 20px;
+	font-weight: bold;
+}
+table {
+	border-collapse: collapse;
+	text-align: center;
+	vertical-align: center;
+	padding: 5px;
+	padding-left: 50px;
+	align: center;
+	width: 90%;
+}
+
+#table-images {
+	height: 80px;
+	weight: 80px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+
+
+th {
+	background-color: white;
+}
+
+td.firstCol {
+	background: white;
+	font-weight: bold;
+}
+
+#images {
+	width: 150px;
+	height: 100px;
+}
+
+div {
+	height: 150px;
+}
+
+#rows {
+	float: left;
+	margin-left: 60px;
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+}
+
+.list {
+	float: right;
+	margin-right: 60px;
+	height: 150px;
+}
+
+#groups {
+	display: inline-block;
+	vertical-align: top;
+	word-wrap: break-word;
+	width: 200px;
+	height: 275px;
+	margin: 10px;
+}
+
+div>p {
+	line-height: 0.5;
+}
+
+#mfg {
+	font-weight: lighter;
+	font-size: 15px;
+}
+
+#price {
+	color: red;
+}
+
+#weight {
+	font-size: 12px;
+}
+
+line-separator {
+	height: 1px;
+	border-bottom: 1px solid #313030;
+}
