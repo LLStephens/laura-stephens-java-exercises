@@ -7,14 +7,14 @@
 	<jsp:param name="currentPage" value="productList" />
 </jsp:include>
 
-	<div id="image-block">
+	<div>
 		<img id="details-images" src="img/${product.imageName}" />
 	</div>
 	
 	<div class="details-body">
 	
 	<p>${product.name}</p>
-	<p>by ${product.manufacturer}</p>
+	<p id = "mfg" >by ${product.manufacturer }</p>
 	<c:choose>
 		<c:when test="${product.averageRating >4.5}">
 			<img id="details-star" src="img/5-star.png">
@@ -32,11 +32,9 @@
 			<img id="details-star" src="img/1-star.png">
 		</c:otherwise>
 	</c:choose>
-	<p>Price: ${product.price}</p>
-	<p>
-		<strong>Weight:</strong> ${product.price} lbs
-	</p>
-	<p>Description: ${product.description}</p>
+	<p id = "price">$${product.price }</p>
+	<p id="weight"><strong>Weight</strong> ${product.weightInLbs } lbs</p>
+	<span id="description">Description: ${product.description}</span>
 	</div>
 
 <jsp:include page="footer.jsp" />

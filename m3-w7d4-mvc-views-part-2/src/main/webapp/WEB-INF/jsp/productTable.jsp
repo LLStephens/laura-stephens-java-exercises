@@ -9,7 +9,7 @@
 <table>
 	<tr>
 		<td></td>
-		<c:forEach var="product" items="${requestScope.productList }">
+		<c:forEach var="product" items="${productList }">
 			<td><image id="table-images" src="img/${product.imageName }"></td>
 		</c:forEach>
 	</tr>

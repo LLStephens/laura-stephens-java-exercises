@@ -100,9 +100,9 @@ td.firstCol {
 	height: 100px;
 }
 
-div {
+/* div {
 	height: 150px;
-}
+} */ 
 
 #rows {
 	float: left;
@@ -171,12 +171,17 @@ line-separator {
 
 #details-images{
 	float: left;
-	height: 150px;
-	width: 200px;
+	height: 200px;
+	width: 275px;
 	padding: 10px
 }
 
 .details-body {
 	text-align: left;
 	padding: 10px;
+}
+
+#description {
+	font-weight: lighter;
+	font-size: 15px;
 }

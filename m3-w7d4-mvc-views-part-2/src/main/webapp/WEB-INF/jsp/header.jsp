@@ -21,19 +21,14 @@
 	</header>
 	<nav>
 		<ul>
-			<c:set var = "selected" value = ""/>
-			<c:if test = "${param.currentPage == 'productList'}">
-				<c:set var= "selected" value = "selected" />
-			</c:if>
-			
 			<c:url var="listUrl" value = "/productList" /> 
 			<li><a class = "${selected}" href="${listUrl}">Product List</a></li>
 			
 			<c:url var="tileUrl" value = "/productTiles" />
-			<li><a href="${tileUrl}">Product Tile</a></li>
+			<li><a class = "${selected}" href="${tileUrl}">Product Tile</a></li>
 			
 			<c:url var="tableUrl" value = "/productTable" />
-			<li><a href="${tableUrl}">Product Table</a></li>
+			<li><a class = "${selected}" href="${tableUrl}">Product Table</a></li>
 		</ul>
 
 	</nav>
