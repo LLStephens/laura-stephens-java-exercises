@@ -8,7 +8,7 @@ public class Review {
 	private int rating;
 	private String title;
 	private String text;
-	private LocalDateTime dateSubmitted;
+	private LocalDateTime dateSubmitted = LocalDateTime.now();
 	
 	public Long getId() {
 		return id;
