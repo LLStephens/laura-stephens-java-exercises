@@ -61,7 +61,6 @@ public class HomePageTest {
 		StoreInputPage storeInput = store.clickStoreInputPage("Coffee Mug");
 		storeInput.inputQuantity("5");
 		CartPage cart = storeInput.submit();
-		
 		Assert.assertTrue(cart.verifyCart("5"));
 
 	}
