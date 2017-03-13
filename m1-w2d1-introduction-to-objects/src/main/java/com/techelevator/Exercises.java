@@ -65,7 +65,12 @@ public class Exercises {
 	 stringSplosion("ab") → "aab"
 	 */
 	public String stringSplosion(String str) {
-		return null;
+		String word = new String();
+		for(int i = 0; i<str.length()+1; i++){
+			for(int j = 0; j<i; j++){
+				word=word+str.charAt(j);
+			}
+		} return word;
 	}
 	
 	/* left off here
@@ -76,9 +81,19 @@ public class Exercises {
 	 last2("axxxaaxx") → 2
 	 */
 	
-	
 	public int last2(String str) {
-		return 0;
+		if (str.length() < 2) {
+			return 0;
+		}
+		int count = 0;
+		String key = str.substring(str.length()-2);
+	
+		for (int i = 0; i < str.length()-2; i++) {
+			String match = str.substring(i,i+2);
+			if (match.equals(key)) {
+				count++;
+			}
+		}return count;
 	}
 	
 	/*
@@ -89,7 +104,16 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
-		return null;
+		String addString = new String();
+		
+		for(int i = 0; i<str.length(); i++){
+			if(i==0 || i == str.length()-1){
+				addString+=str.charAt(i);
+			}else if(str.charAt(i) != 'x'){
+				addString+=str.charAt(i);
+			}
+		} 
+		return addString;
 	}
 	
 	/*
@@ -99,7 +123,13 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+		String pairs = new String();
+		for(int i = 0; i<str.length(); i++){
+			if(i%4==0 || i%4==1) {
+				pairs+=str.charAt(i);
+			}
+		}
+		return pairs;
 	}
 
 	/*
@@ -110,7 +140,13 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		String yakless = new String();
+		String[] arr = str.split("yak");
+		for(String word: arr){
+			if(!word.equals("yak")){
+				yakless = yakless+word;
+			}
+		} return yakless;
 	} 
 
 	
