@@ -1,0 +1,122 @@
+.jumbotron{
+	color: white !important;
+	margin: 0px !important;
+	padding-top: 0px !important;
+	background-color: black !important;
+}  
+ 
+@media (min-width: 451px) { 
+#JumboBackground {
+	background-image: url("img/te_present_1600x1060.jpg") !important;
+	width: 100%;
+	}
+}
+
+@media (max-width: 450px) {
+#JumboBackground{
+	background:black;
+	width: 100%;
+	margin-top:-40px;
+	}
+}
+		
+.navbar {
+    background-color: white !important;
+    margin: 0px !important;
+}
+
+.navbar-left {
+	padding: 15px;
+}
+
+.btn-lg {
+	float: right;
+}
+
+#features {
+	text-align: center;
+}
+
+#features h2{
+	font-weight: normal;
+}
+
+.glyphicon {
+	font-size: 15vw;
+	padding-top: 35px;
+}
+
+.container h1 {
+	font-weight: normal;
+	padding-top: 20px;
+}
+
+#impact p {
+	color: white;
+	text-align: left;
+}
+
+.carousel-item {
+	position: relative;
+}
+
+.img-responsive {
+	padding: 15px;
+}
+
+#signup th {
+	color: white;
+	background-color: #5bc0de;
+	text-align: center;
+}
+
+#premium th{
+	background-color: #5cb85c;
+}
+
+#pro th{
+	background-color: #d9534f;
+}
+
+#signup table {
+	border: solid 1px gray;
+}
+
+#signup h2 {
+	text-transform: uppercase;
+	padding: 0px;
+}
+
+#signup a {
+	color: white;
+}
+
+#signup .btn{
+    margin: auto;
+    width: 100%;
+}
+
+@media (min-width: 451px) { 
+#price {
+	font-size: 10vw;
+}
+
+
+#price:before {
+    content: '$';
+	vertical-align: text-top;
+	font-size: 5vw;
+}
+}
+@media (max-width: 450px) {
+	#price {
+		font-size: 20vw;
+	}
+
+
+	#price:before {
+	    content: '$';
+		vertical-align: text-top;
+		font-size: 10vw;
+	}
+}
