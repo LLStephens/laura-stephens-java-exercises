@@ -4,9 +4,16 @@ $(document).ready(function () {
 	var x = 0;
 	var y = 0;
 	
-	var maxX = 9;
-	var maxY = 9;
 	
+	var max = window.location.pathname.split('/');
+	var maxX = max[4]-1;
+	var maxY = max[4]-1;
+	
+	$("#btnRestart").on( "click", function() {
+		$("#game h2").html("Pirate Explorer");
+		moveShip(function(){x=0, y=0});
+	});
+			
 	$(document).on('keydown', function(event) {
 		if(event.key === "ArrowRight"){
 			if(x<maxX){
@@ -65,7 +72,13 @@ $(document).ready(function () {
 	}
 	
 	function checkForObstacle(selector){
-		if(!$(selector()).hasClass('iceberg') && !$(selector()).hasClass('pirate')){
+		if ($(selector()).hasClass('treasure')){
+			$("#game h2").html("You win");
+			return true;
+		}else if($(selector()).hasClass('pirate')){
+			$("#game h2").html("You lose. Click the restart button to try again.");
+			moveShip(function(){x=0, y=0});
+		} else if(!$(selector()).hasClass('iceberg')){
 			return true;
 		}
 	}

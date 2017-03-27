@@ -97,9 +97,9 @@ $.validator.addMethod("actualCard", function (value, index) {
     return value.match(/\d{16}/); 
 }, "Please enter a valid credit card number");
 
-$.validator.addMethod("actualExpirationg", function (value, index) {
+$.validator.addMethod("actualExpiration", function (value, index) {
     return value.match(/\d{4}/); 
-}, "Please enter a expirationg date");
+}, "Please enter a expiration date");
 
 
 
