@@ -98,7 +98,8 @@ $(document).ready(function () {
 	shippingPrice.on("click", function (event) {
 	   var price = parseFloat($(this).attr("data-cost"));
 	   var subtotal = parseFloat($('#subtotal .price').text().substring(1));
-	   var grandTotal = (subtotal + price);
+	   var tax = parseFloat($('#tax .price').text().substring(1));
+	   var grandTotal = (subtotal + price + tax).toFixed(2);
 	   $('#shipping .price').text("$"+price);
 	   $('#grandtotal .price').text("$"+grandTotal);
 	});

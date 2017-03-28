@@ -72,12 +72,12 @@ $(document).ready(function () {
 			},
 			CreditCardNumber:{
 				required:true,
-				actualCard:true,
+//				actualCard:true,
 				maxLength:16,
 			},
 			ExpirationDate:{
 				required:true,
-				actualExpiration: true,	
+//				actualExpiration: true,	
 				maxLength:4,
 			}		
 		}
